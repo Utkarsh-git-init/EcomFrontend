@@ -7,7 +7,9 @@ function Header(){
     return (
         <div className="header">
             <div>
-                <IoMenu size={30} color="hotpink"/>
+                <Link to="/menu">
+                    <IoMenu size={30} color="hotpink"/>
+                </Link>
             </div>
             <div>
                 <Link to="/">

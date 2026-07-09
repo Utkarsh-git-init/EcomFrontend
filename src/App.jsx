@@ -9,6 +9,7 @@ import AddProduct from "./admin/AddProduct.jsx";
 import ProductList from "./ProductList/ProductList.jsx";
 import ProductPage from "./productPage/ProductPage.jsx";
 import CartPage from "./cart/CartPage.jsx";
+import Menu from "./menu/Menu.jsx";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
                 <Route path="/product/:id" element={<ProductPage/>}/>
                 <Route path="/cart" element={<CartPage/>}/>
             </Route>
+            <Route path={"/menu"} element={<Menu/>}/>
             <Route path="/register" element={<Register/>}/>
             <Route path={"/login"} element={<Login/>}/>
             <Route path="/admin" element={<AdminPage/>}/>

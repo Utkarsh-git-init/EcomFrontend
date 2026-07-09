@@ -1,5 +1,6 @@
 import './register.css'
 import {useEffect, useState} from "react";
+import {Link} from "react-router-dom";
 
 function Register() {
     const [email, setEmail] = useState("");
@@ -61,8 +62,10 @@ function Register() {
     return (
         <>
             <div className="register-container">
-                <div className="login">
+                <div className="login-container">
                     <h1>Register</h1>
+                    <p>Already have an account?</p>
+                    <Link to={"/login"}>Login</Link>
                 </div>
                 <div className="register-inner-container">
                     <div className={"email-container"}>

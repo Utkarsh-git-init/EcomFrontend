@@ -1,5 +1,6 @@
 import {useState} from "react";
 import './login.css'
+import {Link} from "react-router-dom";
 
 function Login() {
     const [email, setEmail] = useState("");
@@ -27,6 +28,8 @@ function Login() {
         <>
             <div className="login-container">
                 <h1>Login</h1>
+                <p>Don't have an account?</p>
+                <Link to={"/register"}>SignUp</Link>
                 <div className="login-form">
                     <form onSubmit={handleSubmit}>
                         <input value={email} placeholder={"Email"} type={"email"}
