@@ -1,0 +1,15 @@
+
+.productList {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.product{
+    padding: 0.5rem 1rem;
+}
+
+@media screen and (min-width: 800px) {
+    .productList {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

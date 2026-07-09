@@ -1,0 +1,28 @@
+.productPeek{
+    display: flex;
+    padding: 0.5rem;
+    flex-direction: column;
+}
+
+.productPeek span{
+    color: hotpink;
+}
+
+.productPeekHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.productPeek-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+@media (min-width: 800px) {
+    .productPeek-list{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+}

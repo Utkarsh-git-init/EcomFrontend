@@ -1,0 +1,9 @@
+.productPage {
+    padding: 0.5rem;
+}
+@media (min-width: 800px) {
+    .productPage {
+        display: flex;
+        flex-direction: row;
+    }
+}

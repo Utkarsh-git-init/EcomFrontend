@@ -1,0 +1,18 @@
+.productCardDetails{
+    display: flex;
+    flex-direction: column;
+}
+
+.productCard .productCardDetails span{
+    color: black;
+}
+.productCardDetailsDiscount{
+    background-color: hotpink;
+    width: 5rem;
+    border-radius: 0.5rem;
+    padding: 0.1rem 0.5rem;
+
+}
+.productCardDetails .productCardDetailsDiscount span{
+    color: white;
+}

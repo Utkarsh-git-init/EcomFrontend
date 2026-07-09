@@ -1,0 +1,75 @@
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 1rem 10rem;
+    gap: 0.5rem;
+}
+.form .variants{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border: black solid 1px;
+    width: 100%;
+}
+.variants label{
+    display: inline-block;
+    width: 6.1rem;
+}
+.variants-details{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.form button{
+    border: black solid 1px;
+    background-color: pink;
+    width: 10rem;
+}
+.form textarea{
+    border: 1px solid #000000;
+}
+.form input{
+    border: 1px solid #000000;
+}
+@media (max-width: 1000px) {
+    .variants-details{
+        flex-direction: column;
+    }
+    .form{
+        padding: 1rem 1rem;
+    }
+}
+
+/* HTML: <div class="loader"></div> */
+.loader {
+    width: 70px;
+    aspect-ratio: 1;
+    background:
+            radial-gradient(farthest-side,#ffa516 90%,#0000) center/16px 16px,
+            radial-gradient(farthest-side,green   90%,#0000) bottom/12px 12px;
+    background-repeat: no-repeat;
+    animation: l17 1s infinite linear;
+    position: relative;
+}
+.loader::before {
+    content:"";
+    position: absolute;
+    width: 8px;
+    aspect-ratio: 1;
+    inset: auto 0 16px;
+    margin: auto;
+    background: #ccc;
+    border-radius: 50%;
+    transform-origin: 50% calc(100% + 10px);
+    animation: inherit;
+    animation-duration: 0.5s;
+}
+@keyframes l17 {
+    100%{transform: rotate(1turn)}
+}

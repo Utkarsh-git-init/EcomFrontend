@@ -1,0 +1,31 @@
+.productPageMiddle {
+    display: flex;
+    flex-direction: column;
+}
+
+.productPageMiddle button {
+    border: black solid 1px;
+}
+.productPageMiddle input {
+    border: black solid 1px;
+}
+.sizes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.sizeBox {
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+    border: 1px solid hotpink;
+    cursor: pointer;
+    border-radius: 4px;
+    width: 3rem;
+    transition: background-color 0.25s;
+}
+.sizeBox.active{
+    border: none;
+    background-color: hotpink;
+}

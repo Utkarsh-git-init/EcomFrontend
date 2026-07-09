@@ -1,0 +1,51 @@
+.productGallery {
+
+}
+
+.mainImage {
+}
+.mainImage > img {
+    transition: all 0.25s ease-in-out;
+}
+
+.thumbnails{
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    white-space: nowrap;
+    padding: 0.5rem 0;
+
+    scrollbar-width: thin; /* Firefox */
+}
+
+.thumbnail{
+    width: 25%;
+    flex: 0 0 auto;                 /* Don't shrink */
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 8px;
+}
+@media screen and (min-width: 800px) {
+    .mainImage {
+        width: 90%;
+    }
+    .thumbnails{
+        width: 10%;
+        flex-direction: column;
+        overflow-x:hidden ;
+        overflow-y: auto;
+        padding: 0;
+    }
+    .thumbnail{
+        width: 100%;
+    }
+    .productGallery{
+        width: 40%;
+        display: flex;
+        flex-direction: row;
+        gap: 0.5rem;
+        padding-right: 0.5rem;
+    }
+}

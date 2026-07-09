@@ -1,0 +1,17 @@
+.admin-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+.admin-page-container button {
+    border:black 2px solid;
+    background-color: hotpink;
+}
+.product-list{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap: 1rem;
+    padding: 2rem;
+}

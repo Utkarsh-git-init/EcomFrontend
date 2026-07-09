@@ -33,9 +33,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #9ca3af;
-    --text-h: #717171;
-    --bg: #16171d;
+    --text: #000000;
+    --text-h: #000000;
+    --bg: #ffffff;
     --border: #2e303a;
     --code-bg: #1f2028;
     --accent: #c084fc;
@@ -53,6 +53,7 @@
 
 body {
   margin: 0;
+  /*padding: 0.5rem;*/
 }
 h1,
 h2 {
