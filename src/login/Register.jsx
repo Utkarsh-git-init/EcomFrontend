@@ -1,6 +1,6 @@
 import './register.css'
 import {useEffect, useState} from "react";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 function Register() {
     const [email, setEmail] = useState("");
@@ -11,6 +11,7 @@ function Register() {
     const [otpBoxOpen, setOtpBoxOpen] = useState(false)
     const [timer, setTimer] = useState(0);
     const [signUpButtonDisabled, setSignUpButtonDisabled] = useState(true);
+    const navigate = useNavigate();
     const baseUrl=import.meta.env.VITE_API_BASE_URL;
     const sendOTP = async () => {
         if(timer>0){
@@ -57,6 +58,7 @@ function Register() {
         })
         const data=await response.text();
         console.log(data);
+        navigate("/login");
 
     }
     return (
