@@ -1,6 +1,7 @@
 .productPageMiddle {
     display: flex;
     flex-direction: column;
+    gap: 0.5rem;
 }
 
 .productPageMiddle button {
@@ -28,4 +29,18 @@
 .sizeBox.active{
     border: none;
     background-color: hotpink;
+}
+
+.buyNowBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid hotpink;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+
+.buyNowBox button{
+    width: 100%;
+    border: none;
 }

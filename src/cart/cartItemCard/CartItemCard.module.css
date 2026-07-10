@@ -3,7 +3,12 @@
     flex-direction: row;
     padding: 0.5rem;
 }
-.card img{
-    width: 5rem;
+.card a{
+    width: 30%;
     padding-right:0.5rem;
+}
+.card .details{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
 }

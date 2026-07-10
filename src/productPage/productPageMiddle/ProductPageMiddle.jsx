@@ -1,9 +1,10 @@
 import {useState} from "react";
 import styles from "./ProductPageMiddle.module.css";
+import Counter from "../../components/counter/Counter.jsx";
 
 function ProductPageMiddle({ product }) {
     const [variant,setVariant] = useState(product.variants[0]); //variant
-    const [quantity,setQuantity] = useState(0);
+    const [quantity,setQuantity] = useState(1);
     const addToCart = () => {
         const baseUrl=import.meta.env.VITE_API_BASE_URL;
         fetch(`${baseUrl}/cart`, {
@@ -23,9 +24,11 @@ function ProductPageMiddle({ product }) {
     }
     return (
         <div className={styles.productPageMiddle}>
-            <p>{product.title}</p>
-            <p><s>Rs. {variant.mrp}</s></p>
-            <p> Rs. {Math.round(variant.mrp * ((100 - variant.discount) / 100))}</p>
+            <div>
+                <p>{product.title}</p>
+                <p><s>Rs. {variant.mrp}</s></p>
+                <p> Rs. {Math.round(variant.mrp * ((100 - variant.discount) / 100))}</p>
+            </div>
             <div className={styles.sizes}>
                 {product.variants.map((v, index) => (
                     <div key={index}
@@ -35,30 +38,22 @@ function ProductPageMiddle({ product }) {
                     </div>
                 ))}
             </div>
-            <div>
+            <div className={styles.buyNowBox}>
                 COD AVAILABLE
             </div>
             <div>
                 <label>Quantity:</label>
-                <input type={"number"}
-                       value={quantity}
-                       step={1}
-                       onChange={(e) => {
-                           const val = e.target.value;
-                           setQuantity(val === "" ? "" : Number(val));
-                       }} />
+                <Counter count={quantity} setCount={setQuantity} />
             </div>
-            <div>
-                <div>
-                    <button>
-                        BUY NOW
-                    </button>
-                </div>
-                <div>
-                    <button onClick={addToCart}>
-                        ADD TO CART
-                    </button>
-                </div>
+            <div className={styles.buyNowBox}>
+                <button>
+                    BUY NOW
+                </button>
+            </div>
+            <div className={styles.buyNowBox}>
+                <button onClick={addToCart}>
+                    ADD TO CART
+                </button>
             </div>
 
         </div>

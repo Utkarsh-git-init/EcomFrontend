@@ -1,0 +1,25 @@
+.counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border: hotpink 1px solid;
+    border-radius: 0.5rem;
+}
+.counter button {
+    width: 100%;
+    border: none;
+    padding: 0.5rem;
+}
+.counter .decrementButton {
+    border-radius: 0.5rem 0 0 0.5rem;
+}
+.counter .incrementButton {
+    /* top-left, top-right, bottom-right, bottom-left */
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+.counter p{
+    width: 100%;
+    text-align: center;
+    padding: 0.5rem;
+}
